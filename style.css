@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Header */
+.main-header{
+    width: 100%;
+}
+.main-header img{
+    width: 156px;
+}
+/* Görünümü düzeltmek için */
+.main-nav{
+    display: inline-block;
+    width: calc(100% - 28rem);
+    text-align: right;
+    font-size: 1.6rem;
+}
+.main-nav span{
+    margin: 0px;
+    padding: 10px;
+}
+.main-nav span:hover{
+    background-color: #5C2E7E;
+    border-radius: 5px;
+    color: #fff;
+}
+/* Küçük ekranda görüntü düzeni için */
+@media(max-width:768px){
+    .main-nav span{
+       display: none;
+    }
+}
+
+/* Main */
+main{
+    background: #F6F6F6;
+}
+/* About */
+
+.music-menu{
+    margin-top: 30px;
+    font-size: 2.3rem;
+}
+
+.music-span{
+    background:#5C2E7E;
+    border-radius: 20px;
+    padding: 15px;
+    color: #fff;
+}
+.btn-option{
+    font-size: 1.8rem;
+}
+.about{
+    margin-top: 0px;
+    height: 45rem;
+    width: 100%;
+    background: url("img/banner.jpg")!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* Yazıya saydam zemin verip görüntü güzelliği için */
+.about-title{
+    display: inline-block;
+    width: 50%;
+    padding: 20px;
+    font-size: 2.4rem;
+    position: relative;
+    top: 40%;
+    left: 150px;
+    background: rgba(46, 76, 109, 0.3);
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/* Farklı boyutlarda görüntü bozulmaması için */
+@media(max-width:992px){
+    .about-title{
+        font-size: 1.6rem;
+        width: 70%;
+    }
+}
+@media(max-width:768px){
+    .about-title{
+        font-size: 1.2rem;
+        width: 70%;
+        top: 50%;
+        left: 20px;
+    }
+}
+
+/* Gallery */
+.gallery{
+    margin-top: 50px;
+    text-align: center;
+}
+.content{
+    opacity: 0;
+    transform: scale(0.5);
+    margin-top: 30px;
+    transition: 1.5s ease;
+}
+.content.active{
+    opacity: 1;
+    transform: scale(1);
+    margin-top: 30px;
+}
+.content img{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+footer{
+    padding: 15px;
+    text-align: center;
+    height: 50px;
+    background: #EEEEEE;
+}
+footer span::before{
+    content: "\00A9";
+}
